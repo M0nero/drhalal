@@ -6,15 +6,28 @@
 //
 
 import SwiftUI
+import FirebaseService
 
 @main
 struct halalApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var authState = AuthState()
+    @StateObject var sessionService = SessionServiceImpl()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            switch authState.value {
+            case .undefined:
+                ProgressView("Please wait...")
+                    .progressViewStyle(CircularProgressViewStyle(tint: .green))
+            case .notAuthenticated:
+                LoginView()
+                    .environmentObject(sessionService)
+            case .authenticated:
+                TabBar()
+                    .environmentObject(sessionService)
+            }
         }
     }
 }

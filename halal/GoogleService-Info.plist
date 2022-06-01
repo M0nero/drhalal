@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>837696801636-e3ckdensiakt685l7kmr16c3s5a4cqfp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.837696801636-e3ckdensiakt685l7kmr16c3s5a4cqfp</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>837696801636-2638fd7fvlk6as2bv9qausmmknpg2ghc.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCArHmzYARgAwX_USE9zz2yUmK6B8yxcyw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>837696801636</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>M0nero.halal</string>
+	<key>PROJECT_ID</key>
+	<string>dr-halal</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dr-halal.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:837696801636:ios:e0aac670607186ec810871</string>
+	<key>DATABASE_URL</key>
+	<string>https://dr-halal-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
