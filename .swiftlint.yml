@@ -1,0 +1,24 @@
+included:
+  - ArmGO
+
+excluded:
+  - Pods
+
+disabled_rules:
+  - trailing_whitespace
+  - void_function_in_ternary
+
+line_length:
+    warning: 141
+    error: 200
+
+function_body_length:
+    warning: 50
+    error: 100
+    
+function_parameter_count:
+    warning: 10
+    error: 11
+    
+large_tuple:
+    warning: 5

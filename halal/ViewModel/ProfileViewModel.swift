@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Combine
-import FirebaseService
 
 extension ProfileView {
     
@@ -27,10 +26,10 @@ extension ProfileView {
         
         var cancellables: Set<AnyCancellable> = []
         
-        func logout() async throws {
-            let promise = AuthService.logout()
-            try await AsyncPromise.fulfill(promise, storedIn: &cancellables)
+//        func logout() async throws {
+//            let promise = AuthService.logout()
+//            try await AsyncPromise.fulfill(promise, storedIn: &cancellables)
             
-        }
+//        }
     }
 }

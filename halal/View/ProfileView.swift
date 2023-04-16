@@ -67,11 +67,11 @@ struct ProfileView: View {
                             message: Text("Logging out will require you to log in again to scan a product or create a new account. Are you sure you would like to log out?"),
                             primaryButton: .destructive(Text("Leave")) {
                                 Task {
-                                    do {
-                                        try await viewModel.logout()
-                                    } catch {
-                                        print(error.localizedDescription)
-                                    }
+//                                    do {
+//                                        try await viewModel.logout()
+//                                    } catch {
+//                                        print(error.localizedDescription)
+//                                    }
                                 }
                             },
                             secondaryButton: .cancel()

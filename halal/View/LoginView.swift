@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseService
+import FirebaseCore
 
 struct LoginView: View {
-    @StateObject private var appleService = FirebaseSignInWithAppleService()
+//    @StateObject private var appleService = FirebaseSignInWithAppleService()
     
     @StateObject private var viewModel = LoginViewModelImpl(
         service: LoginServiceImpl()
@@ -110,7 +109,7 @@ struct LoginView: View {
                 
                 HStack(spacing: 45){
                     Button {
-                        signInWithApple()
+//                        signInWithApple()
                     } label: {
                         Image(systemName: "applelogo")
                             .scaleEffect(1.3)
@@ -141,20 +140,22 @@ struct LoginView: View {
         
         
     }
-    func signInWithApple(){
-        appleService.signIn { result in
-            handleAppleServiceSuccess(result)
-        } onFailed: { err in
-            handleAppleServiceError(err)
-        }
-    }
-    func handleAppleServiceSuccess(_ result: FirebaseSignInWithAppleResult) {
-        let uid = result.uid
-        let firstName = result.token.appleIDCredential.fullName?.givenName ?? ""
-        
-        print(uid)
-        print(firstName)
-    }
+    
+//    func signInWithApple(){
+//        appleService.signIn { result in
+//            handleAppleServiceSuccess(result)
+//        } onFailed: { err in
+//            handleAppleServiceError(err)
+//        }
+//    }
+    
+//    func handleAppleServiceSuccess(_ result: FirebaseSignInWithAppleResult) {
+//        let uid = result.uid
+//        let firstName = result.token.appleIDCredential.fullName?.givenName ?? ""
+//
+//        print(uid)
+//        print(firstName)
+//    }
     
     func handleAppleServiceError(_ error: Error) {
         print(error.localizedDescription)

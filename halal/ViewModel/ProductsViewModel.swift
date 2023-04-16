@@ -7,12 +7,11 @@
 
 import Foundation
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class ProductsViewModel: ObservableObject {
     @Published var products = [Product]()
     @Published var queryResultProducts: [Product] = []
-    @Published var selectedProduct: Product? = nil
+    @Published var selectedProduct: Product?
     
     private let db = Firestore.firestore()
 
@@ -25,7 +24,9 @@ class ProductsViewModel: ObservableObject {
             self.products = documents.compactMap{(query) -> Product? in
                 return try? query.data(as: Product.self)
             }
+            
         }
+        //print(products)
     }
     func fetchProducts(with keyword: String){
         //queryResultProducts = products.filter{$0.keywordsForLookup.contains(where: { $0 == keyword })}

@@ -7,7 +7,8 @@
 
 import Combine
 import Foundation
-import Firebase
+import FirebaseAuth
+import FirebaseCore
 import FirebaseDatabase
 import GoogleSignIn
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3FAFA6F1B40D678A22DD5D /* Pods_halal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248163CCE4564E5713FB951 /* Pods_halal.framework */; };
 		F60B2C4D282DB6AE00FD76D1 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B2C4C282DB6AE00FD76D1 /* Setting.swift */; };
 		F6116B2E282AFF51006F2120 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6116B2D282AFF51006F2120 /* LoginService.swift */; };
 		F6116B30282AFFB9006F2120 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6116B2F282AFFB9006F2120 /* ForgotPasswordService.swift */; };
@@ -39,7 +40,6 @@
 		F65B512A282AEF6F00856E9E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B5129282AEF6E00856E9E /* RegisterView.swift */; };
 		F65B512C282AF25400856E9E /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B512B282AF25400856E9E /* SessionService.swift */; };
 		F65B512E282AF6E700856E9E /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B512D282AF6E700856E9E /* RegistrationService.swift */; };
-		F65B5131282AF86400856E9E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F65B5130282AF86400856E9E /* FirebaseDatabase */; };
 		F6877C22281DCF5400198DA0 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6877C21281DCF5400198DA0 /* ProductView.swift */; };
 		F68A09EF2809C4B100563D88 /* AsyncPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68A09EE2809C4B100563D88 /* AsyncPromise.swift */; };
 		F68A09F22809D61D00563D88 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68A09F12809D61D00563D88 /* ProfileViewModel.swift */; };
@@ -49,11 +49,7 @@
 		F6A67B5B2804960F00CE8375 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A67B5A2804960F00CE8375 /* TabBar.swift */; };
 		F6A67B5D2804961000CE8375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A67B5C2804961000CE8375 /* Assets.xcassets */; };
 		F6A67B602804961000CE8375 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A67B5F2804961000CE8375 /* Preview Assets.xcassets */; };
-		F6A67B6F2806265900CE8375 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F6A67B6E2806265900CE8375 /* FirebaseAnalytics */; };
-		F6A67B712806265900CE8375 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F6A67B702806265900CE8375 /* FirebaseAuth */; };
-		F6A67B732806265900CE8375 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F6A67B722806265900CE8375 /* FirebaseStorage */; };
 		F6E1F6452808C47F00546334 /* AppDelegateAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E1F6442808C47F00546334 /* AppDelegateAdaptor.swift */; };
-		F6E1F64A2808CA2000546334 /* FirebaseService in Frameworks */ = {isa = PBXBuildFile; productRef = F6E1F6492808CA2000546334 /* FirebaseService */; };
 		F6E96ADC2832AEB4007AE137 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E96ADB2832AEB4007AE137 /* TextFieldView.swift */; };
 		F6E96AE02832EC60007AE137 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E96ADF2832EC5F007AE137 /* EditProfileView.swift */; };
 		F6E96AE22832F76B007AE137 /* EditProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E96AE12832F76B007AE137 /* EditProfileImageView.swift */; };
@@ -65,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2248163CCE4564E5713FB951 /* Pods_halal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_halal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1799A2E2DBEA0EF5317549 /* Pods-halal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halal.release.xcconfig"; path = "Target Support Files/Pods-halal/Pods-halal.release.xcconfig"; sourceTree = "<group>"; };
+		DD02E368E923FF93972914D3 /* Pods-halal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halal.debug.xcconfig"; path = "Target Support Files/Pods-halal/Pods-halal.debug.xcconfig"; sourceTree = "<group>"; };
 		F60B2C4C282DB6AE00FD76D1 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F6116B2D282AFF51006F2120 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F6116B2F282AFFB9006F2120 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
@@ -124,18 +123,32 @@
 			files = (
 				F631A8412810BA8A003A7ED3 /* GoogleSignIn in Frameworks */,
 				F63322AA28231C2100EAE52C /* NukeUI in Frameworks */,
-				F6A67B6F2806265900CE8375 /* FirebaseAnalytics in Frameworks */,
-				F6E1F64A2808CA2000546334 /* FirebaseService in Frameworks */,
-				F6A67B712806265900CE8375 /* FirebaseAuth in Frameworks */,
 				F63865342818883E003E5F22 /* ACarousel in Frameworks */,
-				F65B5131282AF86400856E9E /* FirebaseDatabase in Frameworks */,
-				F6A67B732806265900CE8375 /* FirebaseStorage in Frameworks */,
+				DF3FAFA6F1B40D678A22DD5D /* Pods_halal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4253281D2CDE3296A6C854FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD02E368E923FF93972914D3 /* Pods-halal.debug.xcconfig */,
+				8A1799A2E2DBEA0EF5317549 /* Pods-halal.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7A65F8F0C3D668A2317C248F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2248163CCE4564E5713FB951 /* Pods_halal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F638653B28192FAA003E5F22 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,13 +210,6 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		F65B512F282AF86400856E9E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F68A09F32809D8DF00563D88 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +246,8 @@
 			children = (
 				F6A67B572804960F00CE8375 /* halal */,
 				F6A67B562804960F00CE8375 /* Products */,
-				F65B512F282AF86400856E9E /* Frameworks */,
+				4253281D2CDE3296A6C854FB /* Pods */,
+				7A65F8F0C3D668A2317C248F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6A67B682804961000CE8375 /* Build configuration list for PBXNativeTarget "halal" */;
 			buildPhases = (
+				01397AB03FF66D46659FEC07 /* [CP] Check Pods Manifest.lock */,
 				F6A67B512804960F00CE8375 /* Sources */,
 				F6A67B522804960F00CE8375 /* Frameworks */,
 				F6A67B532804960F00CE8375 /* Resources */,
+				9EF7FCC8F5BA2E31EA5D1400 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,14 +314,9 @@
 			);
 			name = halal;
 			packageProductDependencies = (
-				F6A67B6E2806265900CE8375 /* FirebaseAnalytics */,
-				F6A67B702806265900CE8375 /* FirebaseAuth */,
-				F6A67B722806265900CE8375 /* FirebaseStorage */,
-				F6E1F6492808CA2000546334 /* FirebaseService */,
 				F631A8402810BA8A003A7ED3 /* GoogleSignIn */,
 				F63865332818883E003E5F22 /* ACarousel */,
 				F63322A928231C2100EAE52C /* NukeUI */,
-				F65B5130282AF86400856E9E /* FirebaseDatabase */,
 			);
 			productName = halal;
 			productReference = F6A67B552804960F00CE8375 /* halal.app */;
@@ -343,11 +347,9 @@
 			);
 			mainGroup = F6A67B4C2804960F00CE8375;
 			packageReferences = (
-				F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				F6E1F6482808CA2000546334 /* XCRemoteSwiftPackageReference "FirebaseService" */,
 				F631A83F2810BA8A003A7ED3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel" */,
-				F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI" */,
+				F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel.git" */,
+				F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI.git" */,
 			);
 			productRefGroup = F6A67B562804960F00CE8375 /* Products */;
 			projectDirPath = "";
@@ -372,6 +374,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01397AB03FF66D46659FEC07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-halal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF7FCC8F5BA2E31EA5D1400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-halal/Pods-halal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-halal/Pods-halal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-halal/Pods-halal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6A67B512804960F00CE8375 /* Sources */ = {
@@ -550,6 +594,7 @@
 		};
 		F6A67B692804961000CE8375 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD02E368E923FF93972914D3 /* Pods-halal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -586,6 +631,7 @@
 		};
 		F6A67B6A2804961000CE8375 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1799A2E2DBEA0EF5317549 /* Pods-halal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -652,7 +698,7 @@
 				minimumVersion = 6.0.0;
 			};
 		};
-		F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+		F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/NukeUI.git";
 			requirement = {
@@ -660,28 +706,12 @@
 				minimumVersion = 0.8.1;
 			};
 		};
-		F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+		F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JWAutumn/ACarousel.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.0;
-			};
-		};
-		F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-		F6E1F6482808CA2000546334 /* XCRemoteSwiftPackageReference "FirebaseService" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rebeloper/FirebaseService.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -694,38 +724,13 @@
 		};
 		F63322A928231C2100EAE52C /* NukeUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI" */;
+			package = F63322A828231C2100EAE52C /* XCRemoteSwiftPackageReference "NukeUI.git" */;
 			productName = NukeUI;
 		};
 		F63865332818883E003E5F22 /* ACarousel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel" */;
+			package = F63865322818883E003E5F22 /* XCRemoteSwiftPackageReference "ACarousel.git" */;
 			productName = ACarousel;
-		};
-		F65B5130282AF86400856E9E /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		F6A67B6E2806265900CE8375 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		F6A67B702806265900CE8375 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		F6A67B722806265900CE8375 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6A67B6D2806265800CE8375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		F6E1F6492808CA2000546334 /* FirebaseService */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6E1F6482808CA2000546334 /* XCRemoteSwiftPackageReference "FirebaseService" */;
-			productName = FirebaseService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

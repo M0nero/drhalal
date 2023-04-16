@@ -6,25 +6,22 @@
 //
 
 import SwiftUI
-import FirebaseService
 
 @main
 struct halalApp: App {
-    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject private var authState = AuthState()
     @StateObject var sessionService = SessionServiceImpl()
     
     var body: some Scene {
         WindowGroup {
-            switch authState.value {
+            switch sessionService.state {
             case .undefined:
                 ProgressView("Please wait...")
                     .progressViewStyle(CircularProgressViewStyle(tint: .green))
-            case .notAuthenticated:
+            case .loggedOut:
                 LoginView()
                     .environmentObject(sessionService)
-            case .authenticated:
+            case .loggedIn:
                 TabBar()
                     .environmentObject(sessionService)
             }

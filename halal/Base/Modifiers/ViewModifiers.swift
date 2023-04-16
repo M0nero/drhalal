@@ -45,7 +45,7 @@ extension Array: RawRepresentable where Element: Codable {
 }
 
 extension LoginService{
-    // Retreiving RootView Controller...
+    // Retrieving RootView Controller...
     func getRootViewController ()->UIViewController {
         guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else{
             return .init()

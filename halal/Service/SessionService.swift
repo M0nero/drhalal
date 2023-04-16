@@ -7,20 +7,13 @@
 
 import Foundation
 import FirebaseAuth
-//import FirebaseService
 import FirebaseDatabase
 import Combine
-
-// Create a protocol with the following
-/**
- * Init
- * state
- * Publisher to return the user so in the view model you can map and create a struct
- */
 
 enum SessionState {
     case loggedIn
     case loggedOut
+    case undefined
 }
 
 struct UserSessionDetails {
@@ -40,7 +33,7 @@ protocol SessionService {
 
 final class SessionServiceImpl: SessionService, ObservableObject {
     
-    @Published var state: SessionState = .loggedOut
+    @Published var state: SessionState = .undefined
     @Published var userDetails: UserSessionDetails?
     
     private var handler: AuthStateDidChangeListenerHandle?
@@ -57,9 +50,10 @@ final class SessionServiceImpl: SessionService, ObservableObject {
     
     func logout() {
         try? Auth.auth().signOut()
-        
+        state = .loggedOut
     }
-    func updateUserSession(){
+    
+    func updateUserSession() {
         unbind()
         handler = Auth
             .auth()
@@ -87,10 +81,11 @@ final class SessionServiceImpl: SessionService, ObservableObject {
 }
 
 private extension SessionServiceImpl {
-    func unbind(){
+    func unbind() {
         guard let handler = handler else { return }
         Auth.auth().removeStateDidChangeListener(handler)
     }
+    
     func setupObservations() {
         handler = Auth
             .auth()

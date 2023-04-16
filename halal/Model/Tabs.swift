@@ -9,7 +9,7 @@ import SwiftUI
 
 class Tabs: ObservableObject {
     
-    @Published var selection: Tab = .home
+    @Published var selection: Tab
     
     init(initialSelection: Tab = .home) {
         self.selection = initialSelection

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 import Combine
 
 protocol ForgotPasswordService {

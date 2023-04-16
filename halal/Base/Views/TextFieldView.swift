@@ -18,7 +18,7 @@ struct TextFieldView: View {
             VStack(alignment: .leading, spacing: 4, content:{
                 TextField ("", text: $text)
                     .onAppear(){
-                        if text != ""{
+                        if text != "" {
                             withAnimation(.easeIn){
                                 // moving hint to top..
                                 isTapped = true
