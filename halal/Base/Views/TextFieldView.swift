@@ -2,7 +2,7 @@
 //  TextFieldView.swift
 //  halal
 //
-//  Created by Damir Akbarov on 16.05.2022.
+//  Created by Damir Akbarov on 16.05.2023.
 //
 
 import SwiftUI
@@ -14,34 +14,34 @@ struct TextFieldView: View {
     let title: String
     
     var body: some View {
-        VStack{
-            VStack(alignment: .leading, spacing: 4, content:{
-                TextField ("", text: $text)
-                    .onAppear(){
+        VStack {
+            VStack(alignment: .leading, spacing: 4, content: {
+                TextField("", text: $text)
+                    .onAppear {
                         if text != "" {
-                            withAnimation(.easeIn){
+                            withAnimation(.easeIn) {
                                 // moving hint to top..
                                 isTapped = true
                             }
                         }
                         
                     }
-                    .onChange(of: text){ (status) in
-                        if text == ""{
-                            withAnimation(.easeOut){
+                    .onChange(of: text) { _ in
+                        if text == "" {
+                            withAnimation(.easeOut) {
                                 isTapped = false
                             }
                         } else {
-                            withAnimation(.easeIn){
+                            withAnimation(.easeIn) {
                                 // moving hint to top..
                                 isTapped = true
                             }
                         }
                     }
-                .padding (.top, isTapped ? 15 : 0)
+                .padding(.top, isTapped ? 15 : 0)
                 .background(
                     Text(title)
-                        .scaleEffect (isTapped ? 0.8:1)
+                        .scaleEffect(isTapped ? 0.8 : 1)
                         .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
                         .foregroundColor(.gray)
                     , alignment: .leading
@@ -50,12 +50,12 @@ struct TextFieldView: View {
             .padding(.vertical, 12)
             .padding(.horizontal)
             
-            //.background(Color.gray.opacity(0.09))
+//            .background(Color.gray.opacity(0.09))
             .overlay(
                 RoundedRectangle(cornerRadius: 9)
                     .stroke(.gray, lineWidth: 1)
             )
-            //.cornerRadius(5)
+//            .cornerRadius(5)
         }.padding()
     }
 }
@@ -68,7 +68,7 @@ struct TextFieldView_Previews: PreviewProvider {
         @State(initialValue: "") var text1: String
         @State(initialValue: "") var text2: String
         var body: some View {
-            VStack{
+            VStack {
                 TextFieldView(text: $text1, title: "Email")
                 TextFieldView(text: $text2, title: "Password")
             }

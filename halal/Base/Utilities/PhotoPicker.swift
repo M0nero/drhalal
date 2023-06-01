@@ -2,7 +2,7 @@
 //  PhotoPicker.swift
 //  halal
 //
-//  Created by Damir Akbarov on 17.05.2022.
+//  Created by Damir Akbarov on 17.05.2023.
 //
 
 import SwiftUI
@@ -18,11 +18,13 @@ struct PhotoPicker: UIViewControllerRepresentable {
         return picker
     }
     
-    func updateUIViewController(_ uiViewController:UIImagePickerController,context:Context){}
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) { }
+    
     func makeCoordinator() -> Coordinator {
         return Coordinator(photoPicker: self)
     }
-    final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    
+    final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         
         let photoPicker: PhotoPicker
         
@@ -30,15 +32,17 @@ struct PhotoPicker: UIViewControllerRepresentable {
             self.photoPicker = photoPicker
         }
         
-        func imagePickerController(_ picker:UIImagePickerController,didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]){
+        func imagePickerController(_ picker: UIImagePickerController,
+                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let image = info[.editedImage] as? UIImage {
                 guard let data = image.jpegData(compressionQuality: 0.1), let compressedImage = UIImage(data: data) else {
                     print("error compress")
                     return
                 }
                 photoPicker.avatarImage = compressedImage
-            }else{
-                print("some eroor")
+                
+            } else {
+                print("some error")
             }
             picker.dismiss(animated: true)
         }

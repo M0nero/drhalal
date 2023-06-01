@@ -2,7 +2,7 @@
 //  SecureTextField.swift
 //  halal
 //
-//  Created by Damir Akbarov on 10.05.2022.
+//  Created by Damir Akbarov on 10.05.2023.
 //
 
 import SwiftUI
@@ -12,8 +12,8 @@ struct LoginSecureTextField: View {
     @Binding var text: String
     
     var body: some View {
-        HStack{
-            if isSecureField{
+        HStack {
+            if isSecureField {
                 SecureField("Enter your password", text: $text)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
@@ -23,7 +23,7 @@ struct LoginSecureTextField: View {
                     .disableAutocorrection(true)
             }
             
-            ZStack(){
+            ZStack {
                 Image(systemName: isSecureField ? "eye.slash" : "eye")
                     .onTapGesture {
                         isSecureField.toggle()

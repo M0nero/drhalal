@@ -2,7 +2,7 @@
 //  SecureTextField.swift
 //  halal
 //
-//  Created by Damir Akbarov on 10.05.2022.
+//  Created by Damir Akbarov on 10.05.2023.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct SecureTextField: View {
     let placeholder: String
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
 
             Text(title).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
             

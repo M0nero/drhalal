@@ -2,7 +2,7 @@
 //  ButtonView.swift
 //  halal
 //
-//  Created by Damir Akbarov on 11.05.2022.
+//  Created by Damir Akbarov on 11.05.2023.
 //
 
 import SwiftUI
@@ -17,14 +17,14 @@ struct ButtonView: View {
     let handler: ActionHandler
     let indent: Int
     
-    //private let cornerRadius: CGFloat=10
+//    private let cornerRadius: CGFloat=10
     
     internal init (title: String,
                    background: Color = Color("color"),
                    foreground: Color = .white,
                    border: Color = .clear,
                    indent: Int = 120,
-                   handler: @escaping ButtonView.ActionHandler){
+                   handler: @escaping ButtonView.ActionHandler) {
         self.title = title
         self.background = background
         self.foreground = foreground

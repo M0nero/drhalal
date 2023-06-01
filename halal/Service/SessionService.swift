@@ -2,7 +2,7 @@
 //  SessionService.swift
 //  halal
 //
-//  Created by Damir Akbarov on 11.05.2022.
+//  Created by Damir Akbarov on 11.05.2023.
 //
 
 import Foundation
@@ -57,14 +57,14 @@ final class SessionServiceImpl: SessionService, ObservableObject {
         unbind()
         handler = Auth
             .auth()
-            .addStateDidChangeListener { [weak self] _,_ in
+            .addStateDidChangeListener { [weak self] _, _ in
                 guard let self = self else { return }
                 
                 let currentUser = Auth.auth().currentUser
                 self.state = currentUser == nil ? .loggedOut : .loggedIn
                 if currentUser != nil {
                     guard let anonymous = currentUser?.isAnonymous,
-                          //let userName = currentUser?.displayName,
+//                          let userName = currentUser?.displayName,
                           let email = currentUser?.email
                     else {
                         print("handle Error")
@@ -73,7 +73,10 @@ final class SessionServiceImpl: SessionService, ObservableObject {
                     let userName = currentUser?.displayName ?? ""
                     let profileImgUrl = currentUser?.photoURL?.absoluteString ?? ""
                     DispatchQueue.main.async {
-                        self.userDetails = UserSessionDetails(userName: userName, profileImgUrl: profileImgUrl, email: email, anonymous: anonymous)
+                        self.userDetails = UserSessionDetails(userName: userName,
+                                                              profileImgUrl: profileImgUrl,
+                                                              email: email,
+                                                              anonymous: anonymous)
                     }
                 }
             }
@@ -89,14 +92,14 @@ private extension SessionServiceImpl {
     func setupObservations() {
         handler = Auth
             .auth()
-            .addStateDidChangeListener { [weak self] _,_ in
+            .addStateDidChangeListener { [weak self] _, _ in
                 guard let self = self else { return }
                 
                 let currentUser = Auth.auth().currentUser
                 self.state = currentUser == nil ? .loggedOut : .loggedIn
                 if currentUser != nil {
                     guard let anonymous = currentUser?.isAnonymous,
-                          //let userName = currentUser?.displayName,
+//                          let userName = currentUser?.displayName,
                           let email = currentUser?.email
                     else {
                         print("handle Error")
@@ -105,7 +108,10 @@ private extension SessionServiceImpl {
                     let userName = currentUser?.displayName ?? ""
                     let profileImgUrl = currentUser?.photoURL?.absoluteString ?? ""
                     DispatchQueue.main.async {
-                        self.userDetails = UserSessionDetails(userName: userName, profileImgUrl: profileImgUrl, email: email, anonymous: anonymous)
+                        self.userDetails = UserSessionDetails(userName: userName,
+                                                              profileImgUrl: profileImgUrl,
+                                                              email: email,
+                                                              anonymous: anonymous)
                     }
                 }
             }

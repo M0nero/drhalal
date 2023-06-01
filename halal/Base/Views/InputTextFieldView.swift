@@ -2,7 +2,7 @@
 //  InputTextFieldView.swift
 //  halal
 //
-//  Created by Damir Akbarov on 10.05.2022.
+//  Created by Damir Akbarov on 10.05.2023.
 //
 
 import SwiftUI
@@ -15,11 +15,11 @@ struct InputTextFieldView: View {
     let keyboardType: UIKeyboardType
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             
             Text(title).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
             
-            HStack{
+            HStack {
                 TextField(placeholder, text: $text)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
@@ -31,4 +31,3 @@ struct InputTextFieldView: View {
         }.padding(.bottom, 10)
     }
 }
-

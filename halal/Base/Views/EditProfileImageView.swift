@@ -2,8 +2,9 @@
 //  ProfileImageView.swift
 //  halal
 //
-//  Created by Damir Akbarov on 17.05.2022.
+//  Created by Damir Akbarov on 17.05.2023.
 //
+
 import NukeUI
 import SwiftUI
 
@@ -18,13 +19,11 @@ struct EditProfileImageView: View {
                 .resizable()
                 .frame(width: getRect().height/7.5, height: getRect().height/7.5)
                 .clipShape(Circle())
-        }
-        else if imgUrl != "" {
+        } else if imgUrl != "" {
             LazyImage(source: imgUrl)
                 .frame(width: getRect().height/7.5, height: getRect().height/7.5)
                 .clipShape(Circle())
-        }
-        else {
+        } else {
             SwiftUI.Image(systemName: "person.crop.circle.fill")
                 .resizable()
                 .frame(width: getRect().height/7.5, height: getRect().height/7.5)

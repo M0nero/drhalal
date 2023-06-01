@@ -2,14 +2,13 @@
 //  RegistrationService.swift
 //  halal
 //
-//  Created by Damir Akbarov on 11.05.2022.
+//  Created by Damir Akbarov on 11.05.2023.
 //
 
 import Combine
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
-
 
 struct RegistrationCredentials {
     
@@ -28,18 +27,17 @@ protocol RegistrationService {
 enum RegistrationKeys: String {
     case userName
     case profileImgUrl
-    //case email
+//    case email
 }
 
 final class RegistrationServiceImpl: RegistrationService {
     
-    func signInAnonymously() -> Future<Any, Error>{
+    func signInAnonymously() -> Future<Any, Error> {
         Future { promise in
-            Auth.auth().signInAnonymously{res, error in
+            Auth.auth().signInAnonymously { res, error in
                 if let err = error {
                     promise(.failure(err))
-                }
-                else {
+                } else {
                     promise(.success(()))
                 }
             }

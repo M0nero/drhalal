@@ -2,7 +2,7 @@
 //  AsyncPromise.swift
 //  halal
 //
-//  Created by Damir Akbarov on 15.04.2022.
+//  Created by Damir Akbarov on 15.04.2023.
 //
 
 import Combine

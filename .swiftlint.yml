@@ -1,5 +1,5 @@
 included:
-  - ArmGO
+  - halal
 
 excluded:
   - Pods

@@ -2,7 +2,7 @@
 //  BlurView.swift
 //  halal
 //
-//  Created by Damir Akbarov on 08.05.2022.
+//  Created by Damir Akbarov on 08.05.2023.
 //
 
 import SwiftUI
@@ -17,8 +17,7 @@ struct BlurView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIVisualEffectView, context: Context){
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
         
     }
 }
-

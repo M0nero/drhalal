@@ -11,5 +11,12 @@ target 'halal' do
   pod 'FirebaseCrashlytics'
   pod 'FirebaseDatabase'
   pod 'FirebaseFirestoreSwift'
+  pod 'Alamofire', '~> 5.5'
+  pod 'R.swift'
+  pod 'SwiftLint'
+  pod 'SwiftyBeaver'
+  pod 'Swinject'
+  pod 'SwinjectAutoregistration'
+  pod 'SwiftLint'
 
 end
