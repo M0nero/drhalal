@@ -14,6 +14,7 @@ final class ProductsListViewModel: ViewModel {
     
     // MARK: - Properties
     @Published var queryResultProducts: [Product] = []
+    @Published var isEmptyProducts: Bool = false
     @Published var keyword = ""
     @Published var subcategoryId = 0
     @Published var flow: ProductListFlow
@@ -74,8 +75,10 @@ final class ProductsListViewModel: ViewModel {
                 }
             },
                   receiveValue: { [weak self] products in
-                self?.queryResultProducts += products
-                self?.state = (products.count == 10) ? .good : .loadedAll
+                guard let self = self else { return }
+                self.queryResultProducts += products
+                isEmptyProducts = self.queryResultProducts.isEmpty
+                self.state = (products.count == 10) ? .good : .loadedAll
             })
             .store(in: &subscriptions)
     }

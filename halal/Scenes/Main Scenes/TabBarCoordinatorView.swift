@@ -20,27 +20,27 @@ struct TabBarCoordinatorView: View {
             SearchCoordinatorView(coordinator: coordinator.searchCoordinator)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                    Text("Search")
+                    Text("Поиск")
                 }
                 .tag(Tab.search)
             
             HomeCoordinatorView(coordinator: coordinator.homeCoordinator)
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Home")
+                    Text("Главная")
                 }
                 .tag(Tab.home)
             
-            ScannerView()
+            ScannerViewCoordinator(coordinator: coordinator.scannerCoordinator)
                 .tabItem {
                     Image(systemName: "barcode.viewfinder")
-                    Text("Scanner")
+                    Text("Сканер")
                 }.tag(Tab.scanner)
             
             ProfileView()
                 .tabItem {
                     Image(systemName: "person")
-                    Text("Profile")
+                    Text("Профиль")
                 }
                 .tag(Tab.profile)
         }

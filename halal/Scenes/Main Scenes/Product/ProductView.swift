@@ -21,6 +21,7 @@ struct ProductView: View {
                 .zIndex(0)
             Button {
                 dismiss()
+                viewModel.notify()
             } label: {
                 SwiftUI.Image(systemName: "xmark")
                     .font(.title3)

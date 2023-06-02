@@ -11,7 +11,7 @@ protocol ListCoordinatorProtocol: AnyObject {
     func openProduct(_ product: Product)
 }
 
-class HomeCoordinator: ObservableObject, Identifiable, ListCoordinatorProtocol {
+final class HomeCoordinator: ObservableObject, Identifiable, ListCoordinatorProtocol {
 
     // MARK: - Properties
     @Published var viewModel: HomeViewModel!

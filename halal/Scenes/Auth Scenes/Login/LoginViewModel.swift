@@ -14,17 +14,12 @@ protocol LoginViewModel: ViewModel {
     func signInWithGoogle() async throws
     var service: LoginService { get }
     var credentials: LoginCredentials { get }
-    init(service: LoginService)
 }
 
 final class LoginViewModelImpl: ViewModel, LoginViewModel {
     
-    let service: LoginService
-    @Published var credentials: LoginCredentials = LoginCredentials(email: "",
-                                                                    password: "")
-    init(service: LoginService) {
-        self.service = service
-    }
+    @Inject var service: LoginService
+    @Published var credentials: LoginCredentials = LoginCredentials(email: "", password: "")
     
     func login() async throws {
         let promise = service.login(with: credentials)

@@ -28,7 +28,7 @@ extension ProductEndpoint: Endpoint {
         switch self {
         case .getProducts: return "/products"
         case .getProduct(let id): return "/products/\(id)"
-        case .getProductByCis(let cis): return "/products/cis/\(cis)"
+        case .getProductByCis(let cis): return "/product/\(cis)"
         case .getProductsInSubCategory(let id, _, _): return "/products/subcategory/\(id)"
         }
     }

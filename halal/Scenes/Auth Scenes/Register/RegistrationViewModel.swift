@@ -13,23 +13,15 @@ protocol RegistrationViewModel {
     func signInAnonymously() async throws
     var service: RegistrationService { get }
     var newUser: RegistrationCredentials { get }
-    init(service: RegistrationService)
 }
 
-final class RegistrationViewModelImpl: ObservableObject, RegistrationViewModel {
+final class RegistrationViewModelImpl: ViewModel, RegistrationViewModel {
     
-    let service: RegistrationService
+    @Inject var service: RegistrationService
     @Published var newUser = RegistrationCredentials(email: "",
                                                      password: "",
                                                      userName: "",
                                                      profileImgUrl: "")
-
-    private var subscriptions = Set<AnyCancellable>()
-    
-    init(service: RegistrationService) {
-        self.service = service
-        
-    }
     
     func create() async throws {
         let promise = service.register(with: newUser)

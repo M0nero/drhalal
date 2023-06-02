@@ -22,14 +22,7 @@ struct SearchCoordinatorView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ZStack {
-                    if coordinator.productsListViewModel.queryResultProducts.isEmpty {
-                        Text("No results")
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .font(.title)
-                    }
-                    getProductsList(coordinator.productsListViewModel)
-                }
+                getProductsList(coordinator.productsListViewModel)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("Поисковик")

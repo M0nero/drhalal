@@ -29,8 +29,6 @@ struct ProfileView: View {
                                 showingAlert.toggle()
                             }) {
                                 Image(systemName: "rectangle.portrait.and.arrow.right")
-                                
-//                                .resizable()
                                     .dynamicTypeSize(.xxxLarge)
                                     .imageScale(.large)
                                     .foregroundColor(.black)
@@ -53,7 +51,7 @@ struct ProfileView: View {
                 .frame(width: getRect().width, height: getRect().height/3.1)
                 .background(Color(UIColor(named: "color")!))
                 
-                ButtonView(title: "Edit my account", indent: 200) {
+                ButtonView(title: "Редактировать", indent: 200) {
                     showEditProfile.toggle()
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -67,9 +65,9 @@ struct ProfileView: View {
                 
                     .alert(isPresented: $showingAlert) {
                         Alert(
-                            title: Text("Are you sure?"),
-                            message: Text("Logging out will require you to log in again to scan a product or create a new account. Are you sure you would like to log out?"),
-                            primaryButton: .destructive(Text("Leave")) {
+                            title: Text("Опасная зона"),
+                            message: Text("Вы уверены, что хотите выйти из системы?"),
+                            primaryButton: .destructive(Text("Выйти")) {
                                 Task {
                                     do {
                                         try await viewModel.logout()
@@ -110,11 +108,12 @@ struct SettingsView: View {
                     }
                 }
             }.sheet(isPresented: $isShowingUpdatePassword) {
-                UpdatePasswordView()
+                AboutUsView()
             }
         }
     }
 }
+
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()

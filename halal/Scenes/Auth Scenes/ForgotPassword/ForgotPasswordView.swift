@@ -11,9 +11,7 @@ struct ForgotPasswordView: View {
     
     @Environment(\.presentationMode) var presentationMode
 
-    @StateObject private var viewModel = ForgotPasswordViewModelImpl(
-        service: ForgotPasswordServiceImpl()
-    )
+    @StateObject private var viewModel = ForgotPasswordViewModelImpl()
     
     var body: some View {
         NavigationView {
@@ -29,7 +27,6 @@ struct ForgotPasswordView: View {
                             try await viewModel.sendPasswordResetRequest()
                         } catch {
                             print(error.localizedDescription)
-//                            alertShow = AlertSystem(title: "Error", message: error.localizedDescription)
                         }
                     }
                     

@@ -26,9 +26,9 @@ struct EditProfileView: View {
                     isShowingPhotoPicker.toggle()
             }
             
-            TextFieldView(text: $userName, title: "Username")
+            TextFieldView(text: $userName, title: "Имя")
             Spacer()
-            ButtonView(title: "Save") {
+            ButtonView(title: "Сохранить") {
                 updateDisplayName(userName: userName)
                 self.presentationMode.wrappedValue.dismiss()
             }
@@ -59,9 +59,3 @@ struct EditProfileView: View {
         }
     }
 }
-
-//struct EditProfileView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EditProfileView()
-//    }
-//}

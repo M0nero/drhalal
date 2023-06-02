@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @StateObject private var viewModel = RegistrationViewModelImpl(
-        service: RegistrationServiceImpl()
-    )
+    @StateObject private var viewModel = RegistrationViewModelImpl()
     @State private var alertShow: AlertSystem?
     
     @State private var repass = ""

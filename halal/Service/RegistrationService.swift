@@ -27,7 +27,6 @@ protocol RegistrationService {
 enum RegistrationKeys: String {
     case userName
     case profileImgUrl
-//    case email
 }
 
 final class RegistrationServiceImpl: RegistrationService {

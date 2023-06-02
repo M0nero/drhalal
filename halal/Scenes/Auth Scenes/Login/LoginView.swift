@@ -9,11 +9,7 @@ import SwiftUI
 import FirebaseCore
 
 struct LoginView: View {
-//    @StateObject private var appleService = FirebaseSignInWithAppleService()
-    
-    @StateObject private var viewModel = LoginViewModelImpl(
-        service: LoginServiceImpl()
-    )
+    @StateObject private var viewModel = LoginViewModelImpl()
     @State private var alertShow: AlertSystem?
     
     @State private var showRegistration = false
@@ -22,7 +18,6 @@ struct LoginView: View {
     var body: some View {
         VStack {
             VStack {
-                
                 VStack {
                     Image("Logo")
                         .resizable()
@@ -63,19 +58,19 @@ struct LoginView: View {
                         LoginSecureTextField(text: $viewModel.credentials.password)
                         Divider()
                     }
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            showForgotPassword.toggle()
-                        }, label: {
-                            Text("Forgot Password?")
-                        })
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.black)
-                        .sheet(isPresented: $showForgotPassword) {
-                            ForgotPasswordView()
-                        }
-                    }.padding(.top, 5)
+//                    HStack {
+//                        Spacer()
+//                        Button(action: {
+//                            showForgotPassword.toggle()
+//                        }, label: {
+//                            Text("Forgot Password?")
+//                        })
+//                        .font(.system(size: 16, weight: .medium))
+//                        .foregroundColor(.black)
+//                        .sheet(isPresented: $showForgotPassword) {
+//                            ForgotPasswordView()
+//                        }
+//                    }.padding(.top, 5)
                 }
                 
                 ButtonView(title: "Sign in") {

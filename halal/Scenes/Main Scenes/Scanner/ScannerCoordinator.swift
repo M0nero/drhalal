@@ -1,17 +1,16 @@
 //
-//  SearchCoordinator.swift
+//  ScannerCoordinator.swift
 //  halal
 //
-//  Created by Damir Akbarov on 27.05.2023.
+//  Created by Damir Akbarov on 02.06.2023.
 //
 
 import SwiftUI
 
-final class SearchCoordinator: ObservableObject, Identifiable, ListCoordinatorProtocol {
+final class ScannerCoordinator: ObservableObject, Identifiable, ListCoordinatorProtocol {
 
     // MARK: - Properties
-    @Published var viewModel: SearchViewModel!
-    @Published var productsListViewModel: ProductsListViewModel!
+    @Published var viewModel: ScannerViewModel!
     @Published var productViewModel: ProductViewModel?
 
     private unowned let parent: TabBarCoordinator
@@ -20,12 +19,19 @@ final class SearchCoordinator: ObservableObject, Identifiable, ListCoordinatorPr
     init(parent: TabBarCoordinator) {
         self.parent = parent
         self.viewModel = .init(coordinator: self)
-        self.productsListViewModel = .init(.search,
-                                           coordinator: self)
     }
-    
+
+    // MARK: - Public methods
     func openProduct(_ product: Product) {
         self.productViewModel = .init(product: product,
                                       coordinator: self)
+    }
+    
+    func closeProduct() {
+        self.productViewModel = nil
+    }
+    
+    func resetScanner() {
+        self.viewModel.scanDelegate.scannedCode = nil
     }
 }

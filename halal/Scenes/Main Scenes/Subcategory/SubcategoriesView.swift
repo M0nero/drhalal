@@ -42,12 +42,12 @@ struct ItemView: View {
         GeometryReader { reader in
             
             let fontSize = min(reader.size.width * 0.2, 20)
-            let imageWidth: CGFloat = min(60, reader.size.width * 0.6)
+//            let imageWidth: CGFloat = min(60, reader.size.width * 0.6)
             
             VStack(spacing: 5) {
-                LazyImage(source: "https://russkiyhleb.ru/wp-content/uploads/2020/06/n_83-05.png",
-                          resizingMode: .aspectFit)
-                    .frame(width: imageWidth)
+                LazyImage(source: item.img,
+                          resizingMode: .aspectFill)
+                    .frame(width: reader.size.width)
                 
                 Text(item.name)
                     .font(.system(size: fontSize, weight: .semibold, design: .rounded))

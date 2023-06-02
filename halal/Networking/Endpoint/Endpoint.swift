@@ -11,7 +11,6 @@ protocol Endpoint {
     var scheme: String { get }
     var httpMethod: HTTPMethod { get }
     var host: String { get }
-    var port: Int { get }
     var path: String { get }
     var params: [String: String] { get }
     var headers: HTTPHeaders { get }
@@ -19,16 +18,12 @@ protocol Endpoint {
 
 extension Endpoint {
     var scheme: String {
-        return "http"
+        return "https"
     }
     
     var host: String {
-        return "127.0.0.1"
+        return "halal-api.onrender.com"
 //        return "192.168.3.44"
-    }
-    
-    var port: Int {
-        return 8000
     }
     
     var headers: HTTPHeaders {

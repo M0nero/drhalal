@@ -11,43 +11,51 @@ struct ProductsListView<ProductModifier: ViewModifier>: View {
     
     @ObservedObject var viewModel: ProductsListViewModel
     let productModifier: ProductModifier
-
+    
     var body: some View {
-        ScrollView {
-            ForEach(viewModel.queryResultProducts) { product in
-                ProductBarView(product: product)
-                    .buttonStyle(.plain)
-                    .simultaneousGesture(TapGesture().onEnded {
-                        if viewModel.flow == .search {
-                            viewModel.processLastSearch()
-                        }
-                        viewModel.open(product)
-                    })
-                    .animation(.default, value: viewModel.keyword)
-                    .modifier(productModifier)
-            }
-            switch viewModel.state {
-            case .good:
-                Color.clear
-                    .onAppear {
-                        viewModel.getNextData()
+        ZStack {
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.queryResultProducts) { product in
+                        ProductBarView(product: product)
+                            .buttonStyle(.plain)
+                            .simultaneousGesture(TapGesture().onEnded {
+                                if viewModel.flow == .search {
+                                    viewModel.processLastSearch()
+                                }
+                                viewModel.open(product)
+                            })
+                            .animation(.default, value: viewModel.keyword)
+                            .modifier(productModifier)
                     }
-            case .isLoading:
-                ProgressView()
-                    .progressViewStyle(.circular)
-                    .frame(maxWidth: .infinity)
-            case .loadedAll:
-                EmptyView()
-            case .error(let message):
-                Text(message)
-                    .foregroundColor(.pink)
+                }
+                switch viewModel.state {
+                case .good:
+                    Color.clear
+                        .onAppear {
+                            viewModel.getNextData()
+                        }
+                case .isLoading:
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .frame(maxWidth: .infinity)
+                case .loadedAll:
+                    EmptyView()
+                case .error(let message):
+                    Text(message)
+                        .foregroundColor(.pink)
+                }
+            }
+            if viewModel.isEmptyProducts {
+                VStack {
+                    Spacer()
+                    Image("empty")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: getRect().width/1.5, height: getRect().width/1.5)
+                    Spacer()
+                }
             }
         }
     }
 }
-
-//struct ProductsListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProductsListView()
-//    }
-//}

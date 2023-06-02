@@ -86,10 +86,9 @@ final class AFRequest: Request {
                 var components = URLComponents()
                 components.scheme = endpoint.scheme
                 components.host = endpoint.host
-                components.port = endpoint.port
                 components.path = endpoint.path
                 let filteredParams = endpoint.params.filter { $0.value != "" }
-                components.queryItems = filteredParams.map { URLQueryItem(name: $0, value: $1) }
+                components.queryItems = filteredParams.compactMap { URLQueryItem(name: $0, value: $1) }
                 guard let url = components.url else {
                     promise(.failure(ApiError.convertUrlError))
                     return

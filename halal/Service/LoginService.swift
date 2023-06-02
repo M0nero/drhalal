@@ -25,7 +25,6 @@ struct LoginCredentials {
 enum LoginKeys: String {
     case userName
     case profileImgUrl
-//    case email
 }
 
 final class LoginServiceImpl: LoginService {

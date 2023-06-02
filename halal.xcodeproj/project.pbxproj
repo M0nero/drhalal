@@ -31,6 +31,11 @@
 		F638653A281929EC003E5F22 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6386539281929EC003E5F22 /* Product.swift */; };
 		F638653D28193493003E5F22 /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638653C28193493003E5F22 /* ProductsListViewModel.swift */; };
 		F63B98BE281DB24B00B82824 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B98BD281DB24B00B82824 /* Theme.swift */; };
+		F63E32AE2A2933E3000E8296 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E32AD2A2933E2000E8296 /* ScannerViewModel.swift */; };
+		F63E32B02A293560000E8296 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E32AF2A293560000E8296 /* ScannerCoordinator.swift */; };
+		F63E32B22A293970000E8296 /* ScannerViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E32B12A293970000E8296 /* ScannerViewCoordinator.swift */; };
+		F63E32B52A2955C4000E8296 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E32B42A2955C4000E8296 /* AboutUsView.swift */; };
+		F63E32B72A296D3A000E8296 /* DIWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E32B62A296D3A000E8296 /* DIWrappers.swift */; };
 		F65B511D2827EA0600856E9E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B511C2827EA0600856E9E /* BlurView.swift */; };
 		F65B5121282990FA00856E9E /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B5120282990F900856E9E /* InputTextFieldView.swift */; };
 		F65B5124282994DE00856E9E /* LoginSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B5123282994DE00856E9E /* LoginSecureTextField.swift */; };
@@ -142,6 +147,11 @@
 		F6386539281929EC003E5F22 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F638653C28193493003E5F22 /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		F63B98BD281DB24B00B82824 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F63E32AD2A2933E2000E8296 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		F63E32AF2A293560000E8296 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
+		F63E32B12A293970000E8296 /* ScannerViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewCoordinator.swift; sourceTree = "<group>"; };
+		F63E32B42A2955C4000E8296 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		F63E32B62A296D3A000E8296 /* DIWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIWrappers.swift; sourceTree = "<group>"; };
 		F65B511C2827EA0600856E9E /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		F65B5120282990F900856E9E /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
 		F65B5123282994DE00856E9E /* LoginSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSecureTextField.swift; sourceTree = "<group>"; };
@@ -276,6 +286,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F63E32B32A2955B0000E8296 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				F63E32B42A2955C4000E8296 /* AboutUsView.swift */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
 		F65B511E28298FF000856E9E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +369,7 @@
 				F69EE30E2A1136EA000296AD /* ProfileCoordinator.swift */,
 				F676D85829EC1A6400E32039 /* Profile */,
 				F676D85929EC1A6E00E32039 /* EditProfile */,
+				F63E32B32A2955B0000E8296 /* AboutUs */,
 				F676D85F29EC1C6100E32039 /* UpdatePassword */,
 			);
 			path = "Profile Scenes";
@@ -454,6 +473,9 @@
 				F6FD62522A216BB000CB06C8 /* View */,
 				F6C44E0B2A14BF0800D5E4CA /* Model */,
 				F6C44E072A14B58200D5E4CA /* ScannerView.swift */,
+				F63E32AD2A2933E2000E8296 /* ScannerViewModel.swift */,
+				F63E32AF2A293560000E8296 /* ScannerCoordinator.swift */,
+				F63E32B12A293970000E8296 /* ScannerViewCoordinator.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -771,6 +793,7 @@
 				F6FD62322A1D5D0900CB06C8 /* AppModule.swift */,
 				F6FD62342A1D5D1100CB06C8 /* ServiceModule.swift */,
 				F6FD62362A1D5D1F00CB06C8 /* NetworkModule.swift */,
+				F63E32B62A296D3A000E8296 /* DIWrappers.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -987,6 +1010,7 @@
 				F6C44E312A1AC6D400D5E4CA /* ProductApiController.swift in Sources */,
 				F6E96AE6283300A7007AE137 /* UpdatePasswordView.swift in Sources */,
 				F68A09EF2809C4B100563D88 /* AsyncPromise.swift in Sources */,
+				F63E32B52A2955C4000E8296 /* AboutUsView.swift in Sources */,
 				F6E96ADC2832AEB4007AE137 /* TextFieldView.swift in Sources */,
 				F69EE2E429F789D5000296AD /* String+Ext.swift in Sources */,
 				F676D86D29EC29B400E32039 /* GridConstants.swift in Sources */,
@@ -1039,8 +1063,10 @@
 				F6FD62472A20DBDC00CB06C8 /* TabBarCoordinator.swift in Sources */,
 				F63322A128206F6600EAE52C /* Category.swift in Sources */,
 				F6A67B5B2804960F00CE8375 /* TabBarCoordinatorView.swift in Sources */,
+				F63E32AE2A2933E3000E8296 /* ScannerViewModel.swift in Sources */,
 				F6FD62412A20D3A700CB06C8 /* SheetModifier.swift in Sources */,
 				F6E96AE02832EC60007AE137 /* EditProfileView.swift in Sources */,
+				F63E32B02A293560000E8296 /* ScannerCoordinator.swift in Sources */,
 				F6116B3A282B37D7006F2120 /* ButtonView.swift in Sources */,
 				F6116B36282B2AA9006F2120 /* LoginViewModel.swift in Sources */,
 				F6116B38282B3617006F2120 /* ForgotPasswordView.swift in Sources */,
@@ -1054,6 +1080,7 @@
 				F6C44E202A1A3F2200D5E4CA /* DecodeParser.swift in Sources */,
 				F6E1F6452808C47F00546334 /* AppDelegateAdaptor.swift in Sources */,
 				F6FD62432A20D3B000CB06C8 /* PopoverModifier.swift in Sources */,
+				F63E32B22A293970000E8296 /* ScannerViewCoordinator.swift in Sources */,
 				F6FD62352A1D5D1100CB06C8 /* ServiceModule.swift in Sources */,
 				F65B5124282994DE00856E9E /* LoginSecureTextField.swift in Sources */,
 				F638652F281801CC003E5F22 /* ProfileView.swift in Sources */,
@@ -1072,6 +1099,7 @@
 				F65B511D2827EA0600856E9E /* BlurView.swift in Sources */,
 				F638653A281929EC003E5F22 /* Product.swift in Sources */,
 				F6FD623C2A1FCB6300CB06C8 /* ProductListFlow.swift in Sources */,
+				F63E32B72A296D3A000E8296 /* DIWrappers.swift in Sources */,
 				F6E96AED28339F65007AE137 /* ProfileImageView.swift in Sources */,
 				F638653D28193493003E5F22 /* ProductsListViewModel.swift in Sources */,
 				F6E96AE42833000B007AE137 /* UpdatePasswordViewModel.swift in Sources */,

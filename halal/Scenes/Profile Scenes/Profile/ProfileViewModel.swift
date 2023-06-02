@@ -12,10 +12,8 @@ import FirebaseAuth
 final class ProfileViewModel: ViewModel {
     // MARK: - Properties
     @Published var settings: [Setting] = [
-        Setting(name: "Изменить пароль", img: "lock.fill"),
         Setting(name: "Изменить язык", img: "globe"),
         Setting(name: "Рейтинг & Отзыв", img: "star"),
-        Setting(name: "Мои запросы", img: "doc.on.doc"),
         Setting(name: "О нас", img: "exclamationmark.circle")
     ]
     
@@ -28,9 +26,6 @@ final class ProfileViewModel: ViewModel {
     func logout() async throws {
         let promise = logoutPromise()
         try await AsyncPromise.fulfill(promise, storedIn: &subscriptions)
-//        do {
-//            try Auth.auth().signOut()
-//        } catch { print("already logged out") }
     }
     
     private func logoutPromise() -> Future<Void, Error> {
